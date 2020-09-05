@@ -10,9 +10,9 @@ import java.util.function.Function;
  *
  * @author chenquan chenquan@osai.club 2020/05/29 9:39
  */
-public class Group {
+public class GroupUtils {
 
-    private Group() {
+    private GroupUtils() {
     }
 
 
@@ -59,4 +59,5 @@ public class Group {
         });
         return mapCount;
     }
+
 }

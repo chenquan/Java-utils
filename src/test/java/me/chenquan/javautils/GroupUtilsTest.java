@@ -1,7 +1,6 @@
 package me.chenquan.javautils;
 
 import junit.framework.TestCase;
-import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,7 +14,7 @@ import java.util.Map;
  *
  * @author chenquan chenquan@osai.club 2020/05/29 9:39
  */
-public class GroupTest extends TestCase {
+public class GroupUtilsTest extends TestCase {
 
     static class Example {
         private String name;
@@ -47,7 +46,7 @@ public class GroupTest extends TestCase {
 
     public void testGroupHelper() {
 
-        Map<Object, Collection<Example>> stringCollectionMap = Group.groupHelper(exampleList, it -> it.classId);
+        Map<Object, Collection<Example>> stringCollectionMap = GroupUtils.groupHelper(exampleList, it -> it.classId);
         stringCollectionMap.forEach((k, v) -> {
             System.out.println(k + " - " + v);
         });
@@ -55,7 +54,7 @@ public class GroupTest extends TestCase {
     }
 
     public void testGroupCountHelper() {
-        Map<Integer, Long> booleanLongMap = Group.groupCountHelper(exampleList, it -> it.classId);
+        Map<Integer, Long> booleanLongMap = GroupUtils.groupCountHelper(exampleList, it -> it.classId);
 
         booleanLongMap.forEach((k, v) -> {
             System.out.println(k + " - " + v);
